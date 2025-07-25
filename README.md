@@ -21,7 +21,8 @@ Ce projet consiste à créer une API RESTful qui correspond à l'application tri
 
 - [x] Créer un diagramme d'entité
 - [x] Générer les entités à partir du diagramme
-- [ ] Créer les repositories pour les entités
+- [x] Créer les repositories pour les entités
+- [ ] Ajouter les méthodes dans les repositories
 - [ ] Créer les services pour la logique métier
 - [ ] Créer les contrôleurs pour l'API REST
 - [ ] Ajouter la sécurité pour l'authentification des utilisateurs

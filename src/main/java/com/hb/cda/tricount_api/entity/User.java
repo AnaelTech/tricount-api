@@ -11,7 +11,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,7 +26,7 @@ import jakarta.persistence.GeneratedValue;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "user_table")
-public class User {
+public class User implements UserDetails {
   @Id
   @GeneratedValue(strategy = GenerationType.UUID)
   private String id;
@@ -50,4 +54,18 @@ public class User {
   @OneToMany(mappedBy = "debtor")
   private List<Settlement> debtorSettlements = new ArrayList<>();
 
+  @Override
+  public Collection<? extends GrantedAuthority> getAuthorities() {
+    return List.of(() -> "ROLE_USER");
+  }
+
+  @Override
+  public String getUsername() {
+    return email;
+  }
+
+  @Override
+  public boolean isEnabled() {
+    return active;
+  }
 }
