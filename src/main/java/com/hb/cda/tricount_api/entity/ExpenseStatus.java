@@ -2,6 +2,7 @@ package com.hb.cda.tricount_api.entity;
 
 public enum ExpenseStatus {
   PENDING,
-  PAID,
-  SETTLED
+  APPROVED,
+  REJECTED,
+  PAID
 }

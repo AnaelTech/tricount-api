@@ -1,22 +1,39 @@
 package com.hb.cda.tricount_api.dto.response;
 
-import java.util.List;
-
 import lombok.Data;
+import java.util.List;
+import com.hb.cda.tricount_api.entity.ExpenseStatus;
 
+/**
+ * DTO de réponse pour les dépenses
+ * Contient toutes les informations d'une dépense
+ */
 @Data
 public class ExpenseResponseDto {
-  private String id;
+    // ID unique de la dépense
+    private String id;
 
-  private String description;
+    // Description de la dépense
+    private String description;
 
-  private Double amount;
+    // Montant de la dépense
+    private Double amount;
 
-  private String status;
+    // Statut de la dépense
+    private ExpenseStatus status;
 
-  private UserResponseDto payer;
+    // Utilisateur qui a payé la dépense
+    private UserResponseDto payer;
 
-  private List<UserResponseDto> beneficiaries;
+    // Liste des bénéficiaires de la dépense
+    private List<UserResponseDto> beneficiaries;
 
-  private GroupResponseDto group;
+    // Groupe auquel appartient la dépense
+    private String groupId;
+
+    // Nom du groupe
+    private String groupName;
+
+    // Montant par bénéficiaire
+    private Double amountPerBeneficiary;
 }

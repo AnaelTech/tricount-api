@@ -1,4 +1,6 @@
-# Tricount API
+# Tricount API - Application de gestion des dépenses partagées
+
+Une API REST complète pour gérer les dépenses partagées entre amis, inspirée de l'application Tricount.
 
 Ce projet consiste à créer une API RESTful qui correspond à l'application tricount.
 
@@ -23,11 +25,11 @@ Ce projet consiste à créer une API RESTful qui correspond à l'application tri
 - [x] Générer les entités à partir du diagramme
 - [x] Créer les repositories pour les entités
 - [x] Ajouter les méthodes dans les repositories
-- [ ] Créer les services pour la logique métier
-- [ ] Créer les contrôleurs pour l'API REST
-- [ ] Ajouter la sécurité pour l'authentification des utilisateurs
-- [ ] Initialiser un projet Spring Boot avec les dépendances nécessaires
-- [ ] Faire une architecture Controller -> Business -> Repository avec des DTO dans les contrôleurs, toute la logique et l'accès aux repositories dans le Business
+- [x] Créer les services pour la logique métier
+- [x] Créer les contrôleurs pour l'API REST
+- [x] Ajouter la sécurité pour l'authentification des utilisateurs
+- [x] Initialiser un projet Spring Boot avec les dépendances nécessaires
+- [x] Faire une architecture Controller -> Business -> Repository avec des DTO dans les contrôleurs, toute la logique et l'accès aux repositories dans le Business
 - [ ] Faire des tests fonctionnels pour quelques endpoints
 
 ## DIAGRAMME

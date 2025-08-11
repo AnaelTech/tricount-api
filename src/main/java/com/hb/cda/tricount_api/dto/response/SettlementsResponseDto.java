@@ -2,17 +2,33 @@ package com.hb.cda.tricount_api.dto.response;
 
 import lombok.Data;
 
+/**
+ * DTO de réponse pour les règlements
+ * Contient les informations d'un règlement entre utilisateurs
+ */
 @Data
 public class SettlementsResponseDto {
-  private String id;
+    // ID unique du règlement
+    private String id;
 
-  private Double amount;
+    // Montant du règlement
+    private Double amount;
 
-  private UserResponseDto debtor;
+    // Utilisateur qui doit de l'argent
+    private UserResponseDto debtor;
 
-  private UserResponseDto creditor;
+    // Utilisateur qui doit recevoir l'argent
+    private UserResponseDto creditor;
 
-  private String group;
+    // ID du groupe concerné
+    private String groupId;
 
-  private String comment;
+    // Nom du groupe concerné
+    private String groupName;
+
+    // Commentaire du règlement
+    private String comment;
+
+    // Statut du règlement (calculé, confirmé, payé)
+    private String status;
 }

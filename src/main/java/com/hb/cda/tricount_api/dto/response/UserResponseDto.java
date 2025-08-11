@@ -2,11 +2,21 @@ package com.hb.cda.tricount_api.dto.response;
 
 import lombok.Data;
 
+/**
+ * DTO de réponse pour les utilisateurs
+ * Contient les informations publiques d'un utilisateur
+ */
 @Data
 public class UserResponseDto {
-  private String id;
+    // ID unique de l'utilisateur
+    private String id;
 
-  private String name;
+    // Nom de l'utilisateur
+    private String name;
 
-  private String email;
+    // Adresse email de l'utilisateur
+    private String email;
+
+    // Statut actif/inactif de l'utilisateur
+    private Boolean active;
 }

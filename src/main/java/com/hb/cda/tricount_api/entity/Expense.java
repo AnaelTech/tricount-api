@@ -36,7 +36,7 @@ public class Expense {
   private User payer;
 
   @ManyToMany
-  private List<User> beneficiaries = new ArrayList<>();
+  private List<User> beneficiary = new ArrayList<>();
 
   @ManyToOne
   private Group group;

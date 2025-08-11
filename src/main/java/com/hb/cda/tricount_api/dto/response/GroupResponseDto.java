@@ -1,16 +1,29 @@
 package com.hb.cda.tricount_api.dto.response;
 
 import lombok.Data;
-
 import java.util.List;
 
+/**
+ * DTO de réponse pour les groupes
+ * Contient les informations d'un groupe avec ses utilisateurs et dépenses
+ */
 @Data
 public class GroupResponseDto {
-  private String id;
+    // ID unique du groupe
+    private String id;
 
-  private String name;
+    // Nom du groupe
+    private String name;
 
-  private List<String> users;
+    // Liste des utilisateurs du groupe
+    private List<UserResponseDto> users;
 
-  private List<String> expenses;
+    // Liste des dépenses du groupe
+    private List<ExpenseResponseDto> expenses;
+
+    // Total des dépenses du groupe
+    private Double totalExpenses;
+
+    // Nombre de membres du groupe
+    private Integer membersCount;
 }
